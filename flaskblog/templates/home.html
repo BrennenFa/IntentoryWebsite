@@ -1,7 +1,0 @@
-{% extends "layout.html" %}
-
-{% block content %}
-  {% if current_user.is_authenticated %}
-    <h3>Greetings {{current_user.username}}!</h3>
-  {% endif %}
-{% endblock content %}
