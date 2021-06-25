@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  {% if current_user.is_authenticated %}
+    <h3 style="text-align: center">Greetings {{current_user.username}}!</h3>
+  {% endif %}
+  <div class="div-home">
+    <p> This website is for me to experiement with and learn flask.</p>
+
+
+  </div>
+{% endblock content %}

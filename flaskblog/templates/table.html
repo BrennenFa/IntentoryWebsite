@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div>
+  <h1>Inventory Manager</h1>
+  {% if current_user.items|length < 1 %}
+  <h4>There are no items</h4>
+  {% else %}
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Number available</th>
+      <th>Actions</th>
+    </tr>
+    {% for item in current_user.items %}
+      <tr>
+        <td>{{ item.content }}</td>
+        <td>{{ item.number }}</td>
+        <td>
+          <a href="/delete/{{item.id}}">Delete</a>
+          <br>
+          <a href="/update/{{item.id}}">Update</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.content.label(class="form-control-label") }}
+      {{ form.content(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.number.label(class="form-control-label") }}
+      {{ form.number(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class="form-check-label") }}
+    </div>
+
+  </form>
+
+
+</div>
+{% endblock content %}
+

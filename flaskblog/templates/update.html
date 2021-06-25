@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="content">
+  <div class="form">
+    <form action="/update/{{item.id}}" method="POST">
+      <input type="text" name="content" id="content" value="{{item.content}}">
+      <input type="text" name="number" id="number" value="{{item.number}}">
+      <input type="submit" value="Update">
+    
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock content %}

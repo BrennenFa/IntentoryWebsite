@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #1c33b0;
+
+
+}
+
+.nav-item {
+  font-size: 17px;
+}
+.nav-link{
+  color: white;
+}
+
+.navbar-brand{
+  font-size:22px;
+  color: white;
+
+}
+
+
+
+h1{
+  text-align:center;
+  color: black;
+
+}
+
+.div-head {
+  text-align: center;
+  margin: 0 5%;
+
+}
+
+.subheading {
+  font-size:10px;
+  color: grey;
+
+}
+
+p {
+  font-size: 20px;
+
+}
+
+table, td, th{
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.div-home{
+  margin: auto;
+  width: 50%;
+  border: 10px solid #1c33b0;
+  text-align: center;
+}
